@@ -23,4 +23,7 @@ Route::prefix('v1')->group(function (): void {
 
     Route::post('consultas', [ConsultaController::class, 'store']);
     Route::post('consultas/{consulta}/medicamentos', [ConsultaController::class, 'storeMedicamentos']);
+
+    Route::get('vacunas/proximas', [VacunaController::class, 'proximas']);
+    Route::post('vacunas', [VacunaController::class, 'store']);
 });
