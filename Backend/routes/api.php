@@ -29,4 +29,11 @@ Route::prefix('v1')->group(function (): void {
 
     Route::post('facturas', [FacturaController::class, 'store']);
     Route::post('pagos', [PagoController::class, 'store']);
+
+    Route::get('catalogos/medicamentos', [CatalogoController::class, 'medicamentos']);
+    Route::get('catalogos/veterinarios', [CatalogoController::class, 'veterinarios']);
+    Route::get('catalogos/tipos-vacuna', [CatalogoController::class, 'tiposVacuna']);
+    Route::get('catalogos/estados-turno', [CatalogoController::class, 'estadosTurno']);
+    Route::get('catalogos/metodos-pago', [CatalogoController::class, 'metodosPago']);
+    Route::get('catalogos/tipos-pago', [CatalogoController::class, 'tiposPago']);
 });
