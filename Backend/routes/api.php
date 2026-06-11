@@ -14,4 +14,6 @@ Route::prefix('v1')->group(function (): void {
     Route::get('clientes', [ClienteController::class, 'index']);
     Route::post('clientes', [ClienteController::class, 'store']);
     Route::get('clientes/{cliente}/mascotas', [ClienteController::class, 'mascotas']);
+
+    Route::post('mascotas', [MascotaController::class, 'store']);
 });
