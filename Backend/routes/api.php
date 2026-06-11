@@ -11,4 +11,7 @@ use App\Http\Controllers\Api\VacunaController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('v1')->group(function (): void {
+    Route::get('clientes', [ClienteController::class, 'index']);
+    Route::post('clientes', [ClienteController::class, 'store']);
+    Route::get('clientes/{cliente}/mascotas', [ClienteController::class, 'mascotas']);
 });
