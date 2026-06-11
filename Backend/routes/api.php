@@ -20,4 +20,7 @@ Route::prefix('v1')->group(function (): void {
     Route::get('turnos', [TurnoController::class, 'index']);
     Route::post('turnos', [TurnoController::class, 'store']);
     Route::patch('turnos/{turno}/estado', [TurnoController::class, 'updateEstado']);
+
+    Route::post('consultas', [ConsultaController::class, 'store']);
+    Route::post('consultas/{consulta}/medicamentos', [ConsultaController::class, 'storeMedicamentos']);
 });
