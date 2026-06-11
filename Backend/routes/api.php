@@ -16,4 +16,8 @@ Route::prefix('v1')->group(function (): void {
     Route::get('clientes/{cliente}/mascotas', [ClienteController::class, 'mascotas']);
 
     Route::post('mascotas', [MascotaController::class, 'store']);
+
+    Route::get('turnos', [TurnoController::class, 'index']);
+    Route::post('turnos', [TurnoController::class, 'store']);
+    Route::patch('turnos/{turno}/estado', [TurnoController::class, 'updateEstado']);
 });
