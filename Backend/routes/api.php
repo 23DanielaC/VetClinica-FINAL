@@ -26,4 +26,7 @@ Route::prefix('v1')->group(function (): void {
 
     Route::get('vacunas/proximas', [VacunaController::class, 'proximas']);
     Route::post('vacunas', [VacunaController::class, 'store']);
+
+    Route::post('facturas', [FacturaController::class, 'store']);
+    Route::post('pagos', [PagoController::class, 'store']);
 });
