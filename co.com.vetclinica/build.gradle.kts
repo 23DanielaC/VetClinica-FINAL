@@ -54,6 +54,8 @@ tasks.withType<JavaCompile> {
 
 tasks.withType<Test> {
     useJUnit()
+    // Un solo hilo: garantiza el orden secuencial de los escenarios Cucumber
+    maxParallelForks = 1
     systemProperty("cucumber.publish.quiet", "true")
     // Apertura de modulos requerida por Serenity/Selenium en JDK modernos
     jvmArgs(
